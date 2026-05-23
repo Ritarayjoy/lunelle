@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibeCheck</title>
+  <link rel="stylesheet" href="web.css">
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="logo">VibeCheck</div>
+    <div class="nav-icons">
+      <span class="nav-icon" id="searchIcon"></span>
+      <span class="nav-icon" id="notifIcon">
+        <span class="badge" id="notifBadge"></span>
+      </span>
+      <span class="nav-icon" id="messageIcon"></span>
+      <div class="avatar-nav" id="userAvatar"></div>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <aside class="sidebar-left">
+
+      <div class="profile-card">
+        <div class="avatar-wrap">
+          <div class="avatar-placeholder" id="profileAvatar"></div>
+          <div class="online-dot"></div>
+        </div>
+        <div class="profile-name" id="profileName"></div>
+        <div class="profile-handle" id="profileHandle"></div>
+        <div class="profile-stats">
+          <div class="stat">
+            <span class="stat-num" id="postCount">0</span>
+            <span class="stat-lbl">Posts</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" id="followingCount">0</span>
+            <span class="stat-lbl">Following</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" id="followerCount">0</span>
+            <span class="stat-lbl">Followers</span>
+          </div>
+        </div>
+        <div class="current-vibe">
+          <div class="vibe-label">Current Vibe</div>
+          <div class="vibe-text" id="currentVibe">No vibe set yet</div>
+        </div>
+      </div>
+
+      <div class="now-playing-card">
+        <h3 class="card-title">Now Playing</h3>
+        <div class="music-display">
+          <div class="music-icon" id="nowPlayingIcon"></div>
+          <div class="music-info">
+            <div class="music-title" id="nowPlayingTitle">Nothing playing</div>
+            <div class="music-artist" id="nowPlayingArtist"></div>
+          </div>
+          <button class="play-btn" id="playBtn"></button>
+        </div>
+      </div>
+
+    </aside>
+
+    <main class="main-feed">
+
+      <div class="composer">
+        <div class="composer-top">
+          <div class="composer-avatar" id="composerAvatar"></div>
+          <textarea
+            id="postText"
+            placeholder="What is your vibe right now?"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <div class="picker-row">
+          <select id="moodSelect">
+            <option value="">Choose your feeling</option>
+          </select>
+          <input
+            type="text"
+            id="musicInput"
+            placeholder="Song you are vibing to"
+          >
+        </div>
+
+        <div class="composer-actions">
+          <div class="composer-tools">
+            <button class="tool-btn" id="photoBtn">Photo</button>
+            <button class="tool-btn" id="clipBtn">Clip</button>
+            <button class="tool-btn" id="gifBtn">GIF</button>
+          </div>
+          <button class="post-btn" id="postBtn">POST VIBE</button>
+        </div>
+      </div>
+
+      <div id="feed">
+      </div>
+
+    </main>
+
+    <aside class="sidebar-right">
+
+      <div class="trending-card">
+        <h3 class="card-title">Trending Vibes</h3>
+        <ul class="trending-list" id="trendingList">
+        </ul>
+      </div>
+
+      <div class="mood-filter-card">
+        <h3 class="card-title">Filter by Mood</h3>
+        <div class="moods-grid" id="moodFilter">
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <nav class="bottom-nav">
+    <div class="bn-item active" id="bnHome">Home</div>
+    <div class="bn-item" id="bnExplore">Explore</div>
+    <div class="bn-post" id="bnPost">+</div>
+    <div class="bn-item" id="bnMusic">Music</div>
+    <div class="bn-item" id="bnProfile">Profile</div>
+  </nav>
+
+  <script src="web.js"></script>
+</body>
+</html>
